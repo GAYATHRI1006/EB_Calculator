@@ -4,7 +4,7 @@ A simple Electricity Bill (EB) Calculator web app built using HTML, CSS, and Jav
 
 ##  Demo
 
-👉 [Live Demo](https://eb-calculator-sample.netlify.app/)  
+🔗 [Live Demo](https://eb-calculator-sample.netlify.app/)  
 
 ## Developed By
 **Gayathri G**  
