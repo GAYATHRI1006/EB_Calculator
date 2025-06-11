@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>EB Calculator</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>EB Calculator</h2>
+        <div class="inputdiv">
+            <input type="text" id="input" placeholder="Enter the total number of units">
+        </div>
+        <div>
+            <button type="submit" onclick="calculate()">Calculate</button>
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+    <script>
+        function calculate(){
+            const unit=Number(document.getElementById("input").value)
+            const result = document.getElementById("result")
+            let rate
+            if(unit=="")
+            result.innerHTML="Please enter an input"
+            else if(isNaN(unit))
+            result.innerHTML="Please enter an input in numbers"
+            else{
+            if(unit<=50)
+            rate = unit*0.75
+            else if(unit>50 && unit<=150)
+            rate = ((unit-50)*1)+37.5
+            else if(unit>150 && unit<=250)
+            rate = ((unit-150)*1.30)+137.5
+            else 
+            rate = ((unit-250)*1.50)+267.5
+            result.innerHTML="Bill amount is "+ rate +" Rupees"
+            }
+        }
+
+        
+    </script>
+</body>
+</html>
